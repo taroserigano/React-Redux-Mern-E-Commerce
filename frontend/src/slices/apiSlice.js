@@ -1,10 +1,11 @@
 import { fetchBaseQuery, createApi } from '@reduxjs/toolkit/query/react';
 import { BASE_URL } from '../constants';
 
+// just create variable for setting the URL value 
 const baseQuery = fetchBaseQuery({ baseUrl: BASE_URL });
 
 export const apiSlice = createApi({
-  baseQuery,
-  tagTypes: ['Product', 'Order', 'User'],
-  endpoints: (builder) => ({}),
+  baseQuery, // short for baseQuery: baseQuery 
+  tagTypes: ['Product', 'Order', 'User'],  //caching titles 
+  endpoints: (builder) => ({}),            // just convention for the way to add builder 
 });
