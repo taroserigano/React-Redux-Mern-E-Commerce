@@ -20,6 +20,7 @@ const Header = () => {
 
   const logoutHandler = async () => {
     try {
+      // making promiss call, so unwrap to complete it 
       await logoutApiCall().unwrap();
       dispatch(logout());
       // NOTE: here we need to reset cart state for when a user logs out so the next
