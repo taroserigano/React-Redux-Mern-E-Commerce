@@ -7,5 +7,5 @@ const baseQuery = fetchBaseQuery({ baseUrl: BASE_URL });
 export const apiSlice = createApi({
   baseQuery, // short for baseQuery: baseQuery 
   tagTypes: ['Product', 'Order', 'User'],  //caching titles 
-  endpoints: (builder) => ({}),            // just convention for the way to add builder 
+  endpoints: (builder) => ({}),            // just convention, other slices can implement builder like builder.mutation()  
 });
